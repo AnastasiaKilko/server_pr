@@ -11,7 +11,9 @@ class User extends Model implements IdentityInterface
     use HasFactory;
     public $timestamps = false;
     protected $fillable = [
+        'surname',
         'name',
+        'patronymic',
         'login',
         'password'
     ];
@@ -39,5 +41,8 @@ class User extends Model implements IdentityInterface
         return self::where(['login' => $credentials['login'],
             'password' => md5($credentials['password'])])->first();
     }
-
+    public function appointment()
+    {
+        return $this->hasMany(Appointment::class);
+    }
 }
