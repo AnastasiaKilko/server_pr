@@ -1,8 +1,8 @@
-<h1>Список статей</h1>
-<ol>
-    <?php
-    foreach ($posts as $post) {
-        echo '<li>' . $post->title . '</li>';
-    }
-    ?>
-</ol>
+<!--<h1>Список статей</h1>-->
+<!--<ol>-->
+<!--    --><?php
+//    foreach ($doctors as $doctor {
+//        echo '<li>' . $doctor->surname . '</li>';
+//    }
+//    ?>
+<!--</ol>-->

@@ -14,4 +14,8 @@ class Specialty extends Model
     protected $fillable = [
         'specialty',
     ];
+    public function doctor_specialty()
+    {
+        return $this->hasMany(Doctor_Specialty::class);
+    }
 }

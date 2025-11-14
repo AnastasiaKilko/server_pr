@@ -14,4 +14,8 @@ class Position extends Model
     protected $fillable = [
         'position',
     ];
+    public function doctor_position()
+    {
+        return $this->hasMany(Doctor_Position::class);
+    }
 }

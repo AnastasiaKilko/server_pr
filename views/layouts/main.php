@@ -11,6 +11,9 @@
 <header>
     <nav>
         <a href="<?= app()->route->getUrl('/hello') ?>">Главная</a>
+        <a href="<?= app()->route->getUrl('/doctors') ?>">Врачи</a>
+        <a href="<?= app()->route->getUrl('/patients') ?>">Пациенты</a>
+        <a href="<?= app()->route->getUrl('/appointments') ?>">Запись на приём</a>
         <?php
         if (!app()->auth::check()):
             ?>

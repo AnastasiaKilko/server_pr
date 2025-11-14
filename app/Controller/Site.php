@@ -12,8 +12,8 @@ class Site
 {
     public function index(Request $request): string
     {
-        $posts = Doctor::where('id', $request->id)->get();
-        return (new View())->render('site.post', ['posts' => $posts]);
+        $doctors = Doctor::where('id', $request->id)->get();
+        return (new View())->render('site.post', ['doctors' => $doctors]);//надо править здесь
     }
 
     public function hello(): string
