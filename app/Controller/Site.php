@@ -44,4 +44,20 @@ class Site
         Auth::logout();
         app()->route->redirect('/hello');
     }
+
+    public function add_doctor(Request $request): string
+    {
+        if ($request->method === 'POST' && Doctor::create($request->all())) {
+            app()->route->redirect('/doctor');
+        }
+        return new View('site.add_doctor');
+    }
+    public function add_patient(Request $request): string
+    {
+        if ($request->method === 'POST' && Doctor::create($request->all())) {
+            app()->route->redirect('/patient');
+        }
+        return new View('site.add_patient');
+    }
+
 }
