@@ -3,6 +3,7 @@
 namespace Controller;
 
 use Model\Doctor;
+use Model\Patient;
 use Model\User;
 use Src\View;
 use Src\Request;
@@ -10,11 +11,11 @@ use Src\Auth\Auth;
 
 class Site
 {
-    public function index(Request $request): string
-    {
-        $doctors = Doctor::where('id', $request->id)->get();
-        return (new View())->render('site.post', ['doctors' => $doctors]);//надо править здесь
-    }
+//    public function index(Request $request): string
+//    {
+//        $doctors = Doctor::where('id', $request->id)->get();
+//        return (new View())->render('site.doctor', ['doctors' => $doctors]);//надо править здесь
+//    }
 
     public function hello(): string
     {
@@ -48,16 +49,25 @@ class Site
     public function add_doctor(Request $request): string
     {
         if ($request->method === 'POST' && Doctor::create($request->all())) {
-            app()->route->redirect('/doctor');
+            app()->route->redirect('/doctors');
         }
         return new View('site.add_doctor');
     }
     public function add_patient(Request $request): string
     {
-        if ($request->method === 'POST' && Doctor::create($request->all())) {
-            app()->route->redirect('/patient');
+        if ($request->method === 'POST' && Patient::create($request->all())) {
+            app()->route->redirect('/patients');
         }
         return new View('site.add_patient');
     }
-
+    public function doctor(Request $request): string
+    {
+        $doctors = Doctor::all();
+        return (new View())->render('site.doctors', ['doctors' => $doctors]);
+    }
+    public function patient(Request $request): string
+    {
+        $patients = Patient::all();
+        return (new View())->render('site.patients', ['patients' => $patients]);
+    }
 }

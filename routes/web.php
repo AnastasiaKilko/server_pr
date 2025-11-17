@@ -8,3 +8,5 @@ Route::add(['GET', 'POST'], '/login', [Controller\Site::class, 'login']);
 Route::add('GET', '/logout', [Controller\Site::class, 'logout']);
 Route::add(['GET', 'POST'], '/add_doctor', [Controller\Site::class, 'add_doctor']);
 Route::add(['GET', 'POST'], '/add_patient', [Controller\Site::class, 'add_patient']);
+Route::add('GET', '/doctors', [Controller\Site::class, 'doctor']);
+Route::add('GET', '/patients', [Controller\Site::class, 'patient']);

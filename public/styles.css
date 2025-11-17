@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    color: black;
+    color: #1A2224;
 }
 
 header {
@@ -30,30 +30,30 @@ header nav .navigation {
     width: 100%;
     height: 95vh;
     background-color: #5F7E84;
+    position: relative;
 }
 .form-input {
+    position: absolute;
     z-index: 10;
     background-color: white;
-    margin: 0 auto;
+    margin: 15vh 35vw;
     width: 30vw;
-    /*height: 60vh;*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     border: 5vh solid white;
     border-radius: 1%;
+
 }
 .form-input h2 {
     margin-bottom: 5vh;
 }
 .form-input form {
     width: 20vw;
-    height: 30vh;
     display: flex;
     flex-direction: column;
-    /*align-items: center;*/
-    justify-content: space-between;
+    gap: 2vh;
 }
 .form-input form input {
     border: none;
@@ -72,4 +72,35 @@ header nav .navigation {
     height: 3vh;
     width: 10vw;
     background-color: #6BC4C1;
+    border: none;
+}
+.list {
+    margin: 0 auto;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+
+}
+.list h2 {
+    margin: 2vh 0;
+}
+.list-info {
+    display: flex;
+    justify-content: space-between;
+}
+.list-bg {
+    background-color: #C4D6D4;
+    width: 50vw;
+    padding: 1vh 2vw;
+    display: flex;
+}
+.add {
+    margin: 0 auto;
+    height: 3vh;
+    width: 10vw;
+    background-color: #6BC4C1;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
