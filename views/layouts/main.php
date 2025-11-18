@@ -12,7 +12,7 @@
 <header>
     <nav>
         <div class="navigation">
-            <a href="<?= app()->route->getUrl('/hello') ?>">Главная</a>
+            <a href="<?= app()->route->getUrl('/') ?>">Главная</a>
             <a href="<?= app()->route->getUrl('/doctors') ?>">Врачи</a>
             <a href="<?= app()->route->getUrl('/patients') ?>">Пациенты</a>
             <a href="<?= app()->route->getUrl('/appointments') ?>">Запись на приём</a>

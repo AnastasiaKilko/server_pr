@@ -9,6 +9,7 @@ class Doctor_Specialty extends Model
 {
     use HasFactory;
 
+    protected $table = 'doctors_specialties';
     public $timestamps = false;
 
     protected $fillable = [

@@ -8,8 +8,16 @@
         if (!app()->auth::check()):
         ?>
         <form method="post">
-            <label>Логин <input type="text" name="login"></label>
-            <label>Пароль <input type="password" name="password"></label>
+            <div class="input-part">
+                <div class="line"></div>
+                <label>Логин <input type="text" name="login"><span style="color: red;"><?= isset($errors['login']) ? $errors['login'] : '' ?></span></label>
+                <div class="line"></div>
+            </div>
+            <div class="input-part">
+                <div class="line"></div>
+                <label>Пароль <input type="password" name="password"><span style="color: red;"><?= isset($errors['password']) ? $errors['password'] : '' ?></span></label>
+                <div class="line"></div>
+            </div>
             <button>Войти</button>
         </form>
     </div>
